@@ -4,7 +4,7 @@ namespace HalfPipe
 {
     public interface IPipeLineProcessor
     {
-        Task Process();
-        Task<T> Compute<T>();
+        Task Process<U>(U initial);
+        Task<T> Compute<T, U>(U initial);
     }
 }
